@@ -70,7 +70,7 @@
 
 
           <?php
-    $db = mysqli_connect("localhost", "root", "WebTech123", "poll");
+    $db = pg_connect("host=ec2-107-21-201-57.compute-1.amazonaws.com port=5432 dbname=df8fr9tktgttds user=bbkhbakvzwixmm password=b1a6aba6dc8c33e2596ba504f7a5c082d08d664ce5e418a21f9d312cd3154700");
 
     $result = mysqli_query($db, "SELECT ID, Question, Answer1, Answer2, Answer3 FROM pollquestions ORDER BY ID DESC LIMIT 1;");
     extract(mysqli_fetch_assoc($result), EXTR_PREFIX_ALL, 'poll');
