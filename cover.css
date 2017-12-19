@@ -27,7 +27,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-image: url("bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 
 }
 body {
@@ -44,9 +48,8 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
+
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
@@ -70,10 +73,13 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .masthead-nav > li {
   display: inline-block;
+  cursor: default;
+  font-family: 'Raleway', sans-serif
 }
 .masthead-nav > li + li {
   margin-left: 20px;
@@ -81,12 +87,13 @@ body {
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 20px;
+  cursor: default;
   font-weight: bold;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
 }
+
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
@@ -99,10 +106,9 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+.movies {position:relative; width:100% max-width:600px; margin 0 auto; padding: 20px; text-align:center;}
 
-#menu {
-
-}
+.movie {position:relative; display:inline-block; width:30% max-width:180px; margin 0 auto; padding: 0px 10px 0px 10px;}
 
 @media (min-width: 768px) {
   .masthead-brand {
@@ -113,7 +119,14 @@ body {
   }
 }
 
-
+#images_hz {
+width: 100%;
+height: auto;
+overflow: hidden;
+}
+#images_hz img {
+display: inline;
+margin: 0 10px;}
 /*
  * Cover
  */
@@ -134,6 +147,8 @@ body {
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    cursor: pointer;
 }
 
 /* Style the list items */
@@ -153,25 +168,22 @@ ul li {
     user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes)
-ul li:nth-child(odd) {
-    background: #333;
-}
-
 /* Darker background-color on hover */
-ul li:hover {
+.closable:hover {
     background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-    background: #888;
+    cursor: pointer;
+    background: rgb(196, 181, 186);
     color: #fff;
     text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
+    cursor: pointer;
     content: '';
     position: absolute;
     border-color: #fff;
@@ -189,6 +201,7 @@ ul li.checked::before {
     position: absolute;
     right: 0;
     top: 0;
+    color: rgb(34, 87, 79);
     padding: 12px 16px 12px 16px;
 }
 
@@ -215,19 +228,19 @@ ul li.checked::before {
 /* Style the input */
 input {
     border: none;
-    width: 75%;
-    padding: 10px;
-    float: left;
+    width: 150%
+    padding: left;
+    float: center;
     font-size: 16px;
     color: black;
 }
 
 /* Style the "Add" button */
-.addBtn {
+.vote {
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
-    color: #555;
+    background: rgb(158, 142, 153);
+    color: white;
     float: left;
     text-align: center;
     font-size: 16px;
