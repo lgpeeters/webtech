@@ -70,7 +70,7 @@
 
 
           <?php
-    $db = mysqli_connect("localhost", "root", "WebTech123", "poll");
+    $db = mysqli_connect("server.appartmedia.nl", "s161151", "WebTech123", "s161151");
 
     $result = mysqli_query($db, "SELECT ID, Question, Answer1, Answer2, Answer3 FROM pollquestions ORDER BY ID DESC LIMIT 1;");
     extract(mysqli_fetch_assoc($result), EXTR_PREFIX_ALL, 'poll');
