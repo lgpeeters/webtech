@@ -99,7 +99,7 @@
               }
           ?>
           <div>
-             <a href="/cover/index.php">Back to home</a>
+             <a href="/index.php">Back to home</a>
               </div>
         </div>
 
