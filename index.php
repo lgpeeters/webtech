@@ -56,8 +56,8 @@
           <div class="inner cover">
             <h1 class="cover-heading">What is your favourite film?</h1>
             <p class="lead">Below is a list of some famous and well-known movies with a large fanbase. I was wondering which movie is the most popular, so please vote for your favourite movie! You can click on
-            the movie poster if you want more information about the movie.</p>
-            <p class="lead">The result will show after you've voted.</p>
+            the movie poster if you want more information about the movie. If you're favourite film is not on the list, please contact me via the link at the bottom of the page.</p>
+            <p class="lead">The results will show after you've voted. If you want to see the results without voting, please click the Vote button without selecting a movie.</p>
           </div>
 
 
