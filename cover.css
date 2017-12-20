@@ -124,6 +124,11 @@ body {
    padding: 0px 10px 0px 10px;
  }
 
+.movie:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
