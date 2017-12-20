@@ -66,7 +66,7 @@
 
 
           <?php
-    $db = mysqli_connect("localhost", "root", "WebTech123", "poll");
+    $db = mysqli_connect("server.appartmedia.nl", "s161151", "WebTech123", "s161151");
 
     if (isset($_POST['vote'])) {
         $votenum = $_POST['vote'];
