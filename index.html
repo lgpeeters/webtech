@@ -48,50 +48,36 @@
                   <li class="active">Today's date: <script type="text/javascript" src="date.js"></script></li>
                 </ul>
             </div>
-            <div class="movies">
-              <a href="http://www.imdb.com/title/tt2488496/">
-                <div class="movie"><img src="https://www.movieposter.com/posters/archive/main/226/MPW-113453" alt="Star Wars" height=292 width=195></div>
-              </a>
-              <a href="http://www.imdb.com/title/tt0120737/">
-                <div class="movie"><img src="https://www.movieartarena.com/imgs/lotr1final.jpg" alt="Lord of The Rings" height=292 width=195 ></div>
-              </a>
-              <a href="http://www.imdb.com/title/tt0097576/" >
-                <div href="http://www.imdb.com/title/tt0097576/" class="movie"><img src="https://fanart.tv/fanart/movies/89/movieposter/indiana-jones-and-the-last-crusade-5226720e50702.jpg" alt="Indiana Jones" height=292 width=195></div>
-              </a>
-              </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading" style="margin-top: 155px">What is your favourite film?</h1>
-            <p class="lead">Below is a list of some famous and well-known movies with a large fanbase. I was wondering which movie is the most popular, so please vote for your favourite movie! You can click on
-            the movie poster if you want more information about the movie.</p>
-            <p class="lead">The result will show after you've voted.</p>
+            <h1 class="cover-heading">My to-do list</h1>
+            <p class="lead">Manage my to-do list below. Feel free to add some tasks if you feel that I need to do them. I will check here regularly but I cannot promise that I will do every task. Below are some tips from Twitter-user @ALOProductivity to stay productive while working on the to-dos.</p>
           </div>
 
+          <a class="twitter-timeline" data-tweet-limit="3" data-width=600 data-height="50" data-theme="light" href="https://twitter.com/ALOProductivity?ref_src=twsrc%5Etfw">Tweets by ALOProductivity</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-          <?php
-    $db = mysqli_connect("localhost", "root", "WebTech123", "poll");
+          <div id="myDIV" class="header">
+  <input type="text" id="myInput" placeholder="What task should I do?">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
 
-    $result = mysqli_query($db, "SELECT ID, Question, Answer1, Answer2, Answer3 FROM pollquestions ORDER BY ID DESC LIMIT 1;");
-    extract(mysqli_fetch_assoc($result), EXTR_PREFIX_ALL, 'poll');
+<ul id="myUL">
+  <li class="closable">Call Bas</li>
+  <li class="closable">Buy Christmas presents</li>
+  <li class="closable">Plan meeting with Jordy</li>
+  <li class="closable">Finish assignment 2</li>
+  <li class="closable">Return Eva's book</li>
+  <li class="closable">Organize Peter's office</li>
+  <li class="closable">Ask Paul for a raise</li>
+</ul>
 
-    echo "<form method=\"post\" action=\"results.php\">";
-    echo "<strong>$poll_Question</strong><br />";
-    echo "<input type=\"radio\" name=\"vote\" value=\"1\">$poll_Answer1</option><br />";
-    echo "<input type=\"radio\" name=\"vote\" value=\"2\">$poll_Answer2</option><br />";
-    echo "<input type=\"radio\" name=\"vote\" value=\"3\">$poll_Answer3</option><br />";
-    echo "<input type=\"submit\" value=\"Vote!\" />";
-    echo "<input type=\"hidden\" name=\"poll\" value=\"$poll_ID\" />";
-    echo "</form>";
-?>
-    <div>
-       <a href="/cover/contactform.php">My favourite film is not on this list.</a>
+
         </div>
 
       </div>
 
     </div>
-  </div>
 
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="todo.js"></script>

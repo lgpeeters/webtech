@@ -61,7 +61,7 @@
             </a>
             </div>
           <div class="inner cover">
-            <h1 class="cover-heading">Results</h1>
+            <h1 class="cover-heading">What movie should I add?</h1>
           </div>
 
           <?php
@@ -75,7 +75,7 @@
               <input name="name" type="text" value="" size="30"/><br>
               Your email:<br>
               <input name="email" type="text" value="" size="30"/><br>
-              Your message:<br>
+              Name of the film:<br>
               <textarea name="message" rows="7" cols="30"></textarea><br>
               <input type="submit" value="Send email"/>
               </form>
@@ -94,11 +94,13 @@
           	    $from="From: $name<$email>\r\nReturn-path: $email";
                   $subject="Message sent using your contact form";
           		mail("lucas.peeters3000@gmail.com", $subject, $message, $from);
-          		echo "Email sent!";
+          		echo "Thank you! I will add the movie as soon as possible.";
           	    }
               }
           ?>
-
+          <div>
+             <a href="/cover/index.php">Back to home</a>
+              </div>
         </div>
 
       </div>
