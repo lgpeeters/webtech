@@ -85,7 +85,7 @@
     echo "</form>";
 ?>
     <div>
-       <a href="/cover/contactform.php">My favourite film is not on this list.</a>
+       <a href="/contactform.php">My favourite film is not on this list.</a>
         </div>
 
       </div>
