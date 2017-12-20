@@ -99,6 +99,7 @@
     echo "<li>$poll_Answer3: $poll_Answer3_Votes</li>";
     echo "</ul>";
 ?>
+          <a href="/index.php">Back to home</a>
         </div>
 
       </div>
