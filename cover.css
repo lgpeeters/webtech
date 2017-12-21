@@ -271,11 +271,10 @@ textarea{
 .addBtn:hover {
     background-color: #bbb;
 }
-
-/*
- * Footer
- */
-
+footer {
+     margin-top: 0px;
+     padding-top: 0px;
+}
 .mastfoot {
   color: #333; /* IE8 proofing */
   color: rgba(0,0,0,.5);
